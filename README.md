@@ -1,38 +1,32 @@
-# create-svelte
+## #1. Create as supabase project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## #2. Get the the .env keys
 
-## Creating a project
+Put them in the .env file in the root of the project
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```
+PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 ```
 
-## Developing
+*Find these in your Supabase project settings* https://supabase.com/dashboard/project/_/settings/api
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## #3. Set Supabase project up
 
-```bash
-npm run dev
+For easy issue reproduction you need to:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. Disable email confirmation
+   1. Go to Authentication
+   2. Go to Providers
+   3. Under Email disable _"Confirm email"_
+2. Make user sessions last few seconds only to reproduce the issue quickly
+   1. Go to Settings 
+   2. Go to Auth 
+   3. Set User Sessions: 15
 
-## Building
+## #2. Run the project
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. `npm install`
+2. `npm run dev`
+3. Open `http://localhost:5173` in your browser
+4. 
