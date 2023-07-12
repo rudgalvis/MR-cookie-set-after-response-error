@@ -1,6 +1,7 @@
 <script lang="ts">
     import { invalidate } from '$app/navigation'
     import { onMount } from 'svelte'
+    import {log} from "../lib/log";
 
     export let data
 
@@ -8,10 +9,13 @@
     $: ({ supabase, session } = data)
 
     onMount(() => {
+        log('+layout.svelte did onMount()')
+
         const {
             data: { subscription },
         } = supabase.auth.onAuthStateChange((event, _session) => {
-            console.log('on auth state change')
+            log('supabase.auth.onAuthStateChange fired')
+
             if (_session?.expires_at !== session?.expires_at) {
                 invalidate('supabase:auth')
             }

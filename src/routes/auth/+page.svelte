@@ -1,9 +1,15 @@
-<script>
+<script lang="ts">
     import {goto} from "$app/navigation";
+    import {log} from "$lib/log.ts";
+
+    log('auth/+page.svelte init')
 
     export let data
     let {supabase} = data
     $: ({supabase} = data)
+
+
+    log('auth/+page.svelte after data variables set')
 
     let email
     let password
@@ -42,6 +48,7 @@
         }
 
         if (data) {
+            log('Marking logged in moment')
             alert('Login success')
 
             goto('/posts')
