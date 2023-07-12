@@ -6,16 +6,16 @@ after their session has expired. App crashes throwing following error:
 
 ```
 Error: Cannot use `cookies.set(...)` after the response has been generated
-    at event.cookies.set (/home/korb/MR-cookie-set-after-response-error/node_modules/@sveltejs/kit/src/runtime/server/respond.js:493:11)
-    at SvelteKitServerAuthStorageAdapter.setCookie (file:///home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/auth-helpers-sveltekit/dist/index.js:80:24)
-    at SvelteKitServerAuthStorageAdapter.setItem (/home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/auth-helpers-shared/dist/index.js:276:10)
-    at /home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:128:19
+    at event.cookies.set (/home/?/MR-cookie-set-after-response-error/node_modules/@sveltejs/kit/src/runtime/server/respond.js:493:11)
+    at SvelteKitServerAuthStorageAdapter.setCookie (file:///home/?/MR-cookie-set-after-response-error/node_modules/@supabase/auth-helpers-sveltekit/dist/index.js:80:24)
+    at SvelteKitServerAuthStorageAdapter.setItem (/home/?/MR-cookie-set-after-response-error/node_modules/@supabase/auth-helpers-shared/dist/index.js:276:10)
+    at /home/?/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:128:19
     at Generator.next (<anonymous>)
-    at /home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:31:71
+    at /home/?/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:31:71
     at new Promise (<anonymous>)
-    at __awaiter (/home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:27:12)
-    at setItemAsync (/home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:127:46)
-    at SupabaseAuthClient._persistSession (/home/korb/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/GoTrueClient.js:1242:43)
+    at __awaiter (/home/?/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:27:12)
+    at setItemAsync (/home/?/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/lib/helpers.js:127:46)
+    at SupabaseAuthClient._persistSession (/home/?/MR-cookie-set-after-response-error/node_modules/@supabase/gotrue-js/dist/main/GoTrueClient.js:1242:43)
 node:internal/process/promises:288
             triggerUncaughtException(err, true /* fromPromise */);
             ^
